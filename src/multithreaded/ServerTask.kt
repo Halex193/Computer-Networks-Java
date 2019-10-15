@@ -18,10 +18,12 @@ abstract class ServerTask(val connection: Socket) : Runnable
         }
         catch (e: InterruptedIOException)
         {
-            error("Connection interrupted")
+            System.err.println("Connection interrupted")
         }
         finally
         {
+            input.close()
+            output.close()
             connection.close()
         }
     }
