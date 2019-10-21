@@ -9,6 +9,7 @@ abstract class ServerTask(val connection: Socket) : Runnable
 {
     protected val input = DataInputStream(connection.getInputStream())
     protected val output = DataOutputStream(connection.getOutputStream())
+    protected val peerAddress get() = "${connection.inetAddress.hostAddress} - ${connection.port}"
 
     override fun run()
     {

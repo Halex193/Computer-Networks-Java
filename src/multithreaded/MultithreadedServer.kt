@@ -1,6 +1,7 @@
 package multithreaded
 
 import multithreaded.tasks.CommandTask
+import multithreaded.tasks.ConversionTestTask
 import multithreaded.tasks.NumbersTask
 import java.io.IOException
 import java.net.ServerSocket
@@ -9,7 +10,7 @@ import java.util.concurrent.Executors
 
 fun main(args: Array<String>)
 {
-    startServer(1921) { connection -> CommandTask(connection) }
+    startServer(1921) { connection -> ConversionTestTask(connection) }
 }
 
 @Suppress("SameParameterValue")
