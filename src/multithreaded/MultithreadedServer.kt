@@ -3,6 +3,7 @@ package multithreaded
 import multithreaded.tasks.CommandTask
 import multithreaded.tasks.ConversionTestTask
 import multithreaded.tasks.NumbersTask
+import multithreaded.tasks.TriangleTask
 import java.io.IOException
 import java.net.ServerSocket
 import java.net.Socket
@@ -10,7 +11,7 @@ import java.util.concurrent.Executors
 
 fun main(args: Array<String>)
 {
-    startServer(1921) { connection -> ConversionTestTask(connection) }
+    startServer(1921) { connection -> TriangleTask(connection) }
 }
 
 @Suppress("SameParameterValue")
