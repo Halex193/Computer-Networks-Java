@@ -1,6 +1,6 @@
-package multithreaded.tasks
+package tcp.multithreaded.tasks
 
-import multithreaded.ServerTask
+import tcp.multithreaded.ServerTask
 import java.io.IOException
 import java.net.Socket
 import java.io.InputStreamReader

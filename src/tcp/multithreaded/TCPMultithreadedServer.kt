@@ -1,9 +1,6 @@
-package multithreaded
+package tcp.multithreaded
 
-import multithreaded.tasks.CommandTask
-import multithreaded.tasks.ConversionTestTask
-import multithreaded.tasks.NumbersTask
-import multithreaded.tasks.TriangleTask
+import tcp.multithreaded.tasks.TriangleTask
 import java.io.IOException
 import java.net.ServerSocket
 import java.net.Socket
@@ -25,7 +22,7 @@ private fun startServer(port: Int, newTask: (Socket) -> ServerTask)
             while (true)
             {
                 val connection = it.accept()
-                println("Client connected: ${connection.inetAddress.hostAddress} - ${connection.port}")
+//                println("Client connected: ${connection.inetAddress.hostAddress} - ${connection.port}")
                 executor.execute(newTask(connection))
             }
         }

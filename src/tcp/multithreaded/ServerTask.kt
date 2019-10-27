@@ -1,4 +1,4 @@
-package multithreaded
+package tcp.multithreaded
 
 import java.io.DataInputStream
 import java.io.DataOutputStream

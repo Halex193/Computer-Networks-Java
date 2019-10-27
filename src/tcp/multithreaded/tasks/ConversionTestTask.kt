@@ -1,6 +1,6 @@
-package multithreaded.tasks
+package tcp.multithreaded.tasks
 
-import multithreaded.ServerTask
+import tcp.multithreaded.ServerTask
 import java.net.Socket
 
 class ConversionTestTask(connection: Socket) : ServerTask(connection)

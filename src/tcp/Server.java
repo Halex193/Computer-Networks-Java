@@ -1,3 +1,5 @@
+package tcp;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -9,7 +11,7 @@ public class Server
 {
     public static void main(String[] args)
     {
-        System.out.println("Server started...");
+        System.out.println("tcp.Server started...");
         try
         {
             ServerSocket socket = new ServerSocket(1921);
